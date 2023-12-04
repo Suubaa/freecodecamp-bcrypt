@@ -13,12 +13,14 @@ app.get("/", (req, res) => {
   res.send("Hello world!");
 });
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
+//saltRounds - the number of times you run the algorithm.`
 bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
-  console.log(hash);
+  console.log(hash)
+
   bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
-    console.log(res);
-  });
-});
+    console.log(res)
+  })
+})
 
 //END_ASYNC
 
